@@ -17,4 +17,8 @@ dotnet add projectName.Infrastructure reference projectName.Application
 
 rider .
 
+// Finally, to run the project:
+dotnet run --project projectName.Api
+
+
 ```
