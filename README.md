@@ -96,7 +96,9 @@ Servicios que solo ejecutan una lógica de negocio corta.
 Demasiados servicios Transient pueden generar más consumo de memoria si se crean muchas instancias repetidamente.
 
 🧮 🔍 Resumen visual
-Tipo de ciclo de vida	| Cuándo se crea	| Cuándo se destruye	| Uso recomendado
-Singleton	|Una sola vez (al iniciar la app)	| Al apagar la app	| Configuraciones globales, logging
-Scoped |	Una vez por request HTTP	| Al terminar el request |	Servicios con datos por petición, DbContext
-Transient	| Cada vez que se inyecta	| Cuando se libera el objeto |	Servicios livianos, sin estado
+
+|TIPO| Tipo de ciclo de vida | Cuándo se crea | Cuándo se destruye | 
+|---------|-----------------------|----------------|--------------------|
+|Sinlgeton| Uso recomendado Singleton |Una sola vez (al iniciar la app) | Al apagar la app 
+|Scoped| Configuraciones globales, logging Scoped | Una vez por request HTTP | Al terminar el request |
+|Transient| Servicios con datos por petición, DbContext Transient | Cada vez que se inyecta | Cuando se libera el objeto | 
